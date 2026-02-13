@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Oficina DAC: Mecânica de confiança no Ponto Chic. Serviços de mecânica geral, injeção eletrônica e revisão preventiva com transparência total.">
+    <meta name="keywords" content="oficina mecânica, Ponto Chic, reparos de carro, diagnóstico automotivo, Nova Iguaçu">
+    <meta property="og:title" content="Oficina DAC">
+    <meta property="og:description" content="Ar Condicionado e Serviços automotivos.">
+    <meta property="og:image"
+        content="https://cdn.b4c.inf.br/storage/hds/assets/gas-refrigerante-e-oleos-correspondentes-para-ar-condicionado-automotivo5db10b63fa14ddbfce1103466060fc2c.jpg">
+    <meta property="og:url" content="https://seusite.com">
+    <title>Oficina DAC | Especialista no Ponto Chic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- Navegação -->
+    <nav class="bg-slate-900 text-white p-4 sticky top-0 z-50 shadow-lg" role="navigation">
+        <div class="container mx-auto flex justify-between items-center">
+            <img src="https://static-media.hotmart.com/EsQLJoFgEjCqyKjWJ9qBm7IY8v4=/fit-in/200x200/filters:quality(1):format(webp)/klickart-prod/uploads/media/file/6015575/logo_da_oficina_para_bon_png.png"
+                alt="Logo da Oficina DAC" class="h-10 w-auto" loading="lazy">
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex space-x-6">
+                <a href="#servicos" class="hover:text-blue-500 transition" aria-label="Ir para Serviços">Serviços</a>
+                <a href="#sobre" class="hover:text-blue-500 transition" aria-label="Ir para Sobre">Sobre</a>
+                <a href="#contato" class="hover:text-blue-500 transition"
+                    aria-label="Ir para Localização">Localização</a>
+            </div>
+            <!-- Botão Orçamento -->
+            <a href="https://wa.me/5521965738881" target="_blank"
+                class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-full font-bold transition flex items-center"
+                aria-label="Solicitar orçamento via WhatsApp">
+                <i class="fab fa-whatsapp mr-2"></i> Orçamento
+            </a>
+            <!-- Menu Mobile (Hamburger) -->
+            <button class="md:hidden text-white focus:outline-none" id="menu-toggle"
+                aria-label="Abrir menu de navegação">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Menu Mobile Dropdown -->
+        <div class="md:hidden hidden bg-slate-800 mt-4 p-4 rounded-lg" id="mobile-menu">
+            <a href="#servicos" class="block py-2 hover:text-blue-500 transition"
+                aria-label="Ir para Serviços">Serviços</a>
+            <a href="#sobre" class="block py-2 hover:text-blue-500 transition" aria-label="Ir para Sobre">Sobre</a>
+            <a href="#contato" class="block py-2 hover:text-blue-500 transition"
+                aria-label="Ir para Localização">Localização</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="relative h-[500px] flex items-center justify-center text-center text-white" role="banner">
+        <div class="absolute inset-0 bg-black/60 z-10"></div>
+        <div
+            class="absolute inset-0 bg-[url('https://cdn.b4c.inf.br/storage/hds/assets/gas-refrigerante-e-oleos-correspondentes-para-ar-condicionado-automotivo5db10b63fa14ddbfce1103466060fc2c.jpg')] bg-cover bg-center">
+        </div>
+        <div class="relative z-20 px-4 max-w-4xl">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Bem-vindos a <span
+                    class="text-blue-500">DAC</span></h1>
+            <p class="text-lg md:text-xl mb-8">Ar Condicionado e Serviços automotivos</p>
+            <a href="#servicos"
+                class="bg-blue-700 hover:bg-blue-600 text-white px-8 py-4 rounded-md text-lg font-bold transition uppercase tracking-widest"
+                aria-label="Conhecer serviços">Conheça nossos serviços</a>
+        </div>
+    </header>
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-20 container mx-auto px-4" role="main">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block pb-2">Nossos Serviços</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div
+                class="bg-white p-8 rounded-xl shadow-md border-t-4 border-blue-500 hover:shadow-xl transition service-card">
+                <i class="fas fa-tools text-4xl text-slate-700 mb-4" aria-hidden="true"></i>
+                <h3 class="text-xl font-bold mb-2">Mecânica Geral</h3>
+                <p class="text-gray-600">Suspensão, freios, embreagem e reparos de motor com peças de primeira linha.
+                </p>
+            </div>
+            <div
+                class="bg-white p-8 rounded-xl shadow-md border-t-4 border-blue-500 hover:shadow-xl transition service-card">
+                <i class="fas fa-microchip text-4xl text-slate-700 mb-4" aria-hidden="true"></i>
+                <h3 class="text-xl font-bold mb-2">Injeção Eletrônica</h3>
+                <p class="text-gray-600">Diagnóstico computadorizado para identificar falhas com precisão e economia.
+                </p>
+            </div>
+            <div
+                class="bg-white p-8 rounded-xl shadow-md border-t-4 border-blue-500 hover:shadow-xl transition service-card">
+                <i class="fas fa-oil-can text-4xl text-slate-700 mb-4" aria-hidden="true"></i>
+                <h3 class="text-xl font-bold mb-2">Revisão Preventiva</h3>
+                <p class="text-gray-600">Troca de óleo, filtros e check-up completo para sua viagem ser segura.</p>
+            </div>
+            <!-- Novos Serviços -->
+            <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-blue-500 hover:shadow-xl transition service-card">
+                <i class="fas fa-snowflake text-4xl text-slate-700 mb-4" aria-hidden="true"></i>
+                <h3 class="text-xl font-bold mb-2">Ar Condicionado</h3>
+                <p class="text-gray-600">Carga de gás, higienização, manutenção e reparos completos para climatização ideal.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-blue-500 hover:shadow-xl transition service-card">
+                <i class="fas fa-car text-4xl text-slate-700 mb-4" aria-hidden="true"></i>
+                <h3 class="text-xl font-bold mb-2">Suspensão e Embreagem</h3>
+                <p class="text-gray-600">Reparos e ajustes em suspensão, embreagem e correia dentada para dirigibilidade perfeita.
+                </p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-blue-500 hover:shadow-xl transition service-card">
+                <i class="fas fa-battery-half text-4xl text-slate-700 mb-4" aria-hidden="true"></i>
+                <h3 class="text-xl font-bold mb-2">Carga de Bateria</h3>
+                <p class="text-gray-600">Recarga e manutenção de baterias para garantir partida confiável do veículo.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-blue-500 hover:shadow-xl transition service-card">
+                <i class="fas fa-clock text-4xl text-slate-700 mb-4" aria-hidden="true"></i>
+                <h3 class="text-xl font-bold mb-2">Em Breve: Revisão Completa</h3>
+                <p class="text-gray-600">Revisão geral preventiva em breve, incluindo todos os sistemas para máxima segurança.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="bg-slate-900 text-white py-20" role="main">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <img src="https://static-media.hotmart.com/EsQLJoFgEjCqyKjWJ9qBm7IY8v4=/fit-in/200x200/filters:quality(1):format(webp)/klickart-prod/uploads/media/file/6015575/logo_da_oficina_para_bon_png.png"
+                    alt="Imagem de uma oficina mecânica moderna com ferramentas e veículos"
+                    class="rounded-lg shadow-2xl" loading="lazy">
+            </div>
+            <div class="md:w-1/2 md:pl-16">
+                <h2 class="text-3xl font-bold mb-6 italic">Por que escolher a DAC?</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-blue-500 mt-1 mr-3" aria-hidden="true"></i>
+                        <span> Realizamos manutenções e reparos no veículo dos clientes, com o máximo de segurança.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-blue-500 mt-1 mr-3" aria-hidden="true"></i>
+                        <span>Honestidade, transparência, respeito, profissionalismo e segurança são nossos principais valores.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-blue-500 mt-1 mr-3" aria-hidden="true"></i>
+                        <span>Somos uma empresa referência na prestação de serviços de manutenção e reparos automotivos, na Baixada Fluminense, RJ.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-20 container mx-auto px-4" role="main">
+        <div class="flex flex-col md:flex-row gap-10">
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold mb-6">Onde Estamos</h2>
+                <p class="mb-4"><i class="fas fa-map-marker-alt text-blue-500 mr-2" aria-hidden="true"></i>Estr. da Gama,
+                    125 - Posse, Nova Iguaçu - RJ, 26030-200</p>
+                <p class="mb-4"><i class="fas fa-phone text-blue-500 mr-2" aria-hidden="true"></i> (21) 965738881</p>
+                <p class="mb-8"><i class="fas fa-clock text-blue-500 mr-2" aria-hidden="true"></i> Seg a Sex: 08h às 18h |
+                    Sáb: 08h às 12h</p>
+                <a href="https://wa.me/5521965738881"
+                    class="inline-block bg-green-600 text-white px-8 py-3 rounded font-bold hover:bg-green-700 transition"
+                    aria-label="Chamar no WhatsApp">CHAMAR NO WHATSAPP</a>
+            </div>
+            <div class="md:w-1/2 h-64 rounded-lg overflow-hidden flex items-center justify-center relative">
+                <!-- Link clicável sobre o mapa para abrir no Google Maps (z-index reduzido para evitar conflitos) -->
+                <a href="https://www.google.com/maps?q=Estr.+da+Gama,+125+-+Posse,+Nova+Igua%C3%A7u+-+RJ,+26030-200"
+                    target="_blank" aria-label="Abrir localização da Oficina DAC no Google Maps"
+                    class="absolute inset-0 z-5 cursor-pointer">
+                    <!-- Placeholder invisível para acessibilidade -->
+                    <span class="sr-only">Clique para abrir no Google Maps</span>
+                </a>
+                <!-- Iframe do Google Maps incorporado -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.1234567890123!2d-43.456789!3d-22.987654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd1234567890%3A0xabcdef123456!2sEstr.%20da%20Gama%2C%20125%20-%20Posse%2C%20Nova%20Igua%C3%A7u%20-%20RJ%2C%2026030-200!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" title="Localização da Oficina DAC no Google Maps"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-gray-400 py-8 text-center border-t border-gray-800" role="contentinfo">
+        <p>&copy; 2026 Oficina DAC - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5521965738881"
+        class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform z-50"
+        aria-label="Contato via WhatsApp">
+        <i class="fab fa-whatsapp text-3xl" aria-hidden="true"></i>
+    </a>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="back-to-top"
+        class="fixed bottom-24 right-6 bg-blue-500 text-white w-12 h-12 rounded-full shadow-2xl hover:scale-110 transition-transform z-50 hidden"
+        aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- JavaScript para Menu Mobile e Botão Voltar ao Topo -->
+    <script>
+        // Menu Mobile
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Botão Voltar ao Topo
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.remove('hidden');
+            } else {
+                backToTop.classList.add('hidden');
+            }
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+/* Comportamento de rolagem suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animações personalizadas para cartões de serviço */
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsividade extra para telas muito pequenas */
+@media (max-width: 480px) {
+    .service-card {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Estilos para o botão voltar ao topo */
+#back-to-top {
+    transition: opacity 0.3s ease;
+}
+
+#back-to-top:hover {
+    opacity: 0.8;
+}
+/* Garantir que a div do mapa seja relativa e contenha o link/iframe */
+#contato .relative {
+    position: relative !important;
+}
+
+/* Cursor pointer para indicar que o mapa é clicável */
+#contato a[href*="maps"] {
+    cursor: pointer;
+}
+
+/* Prevenir overflow ou posicionamento estranho em mobile */
+@media (max-width: 768px) {
+    #contato .md\:w-1\/2 {
+        height: 300px;
+        /* Ajuste se necessário para mobile */
+    }
+}
