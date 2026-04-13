@@ -1,0 +1,242 @@
+/* Variáveis de Cores - Altere aqui com as cores do Instagram dela! */
+:root {
+    --cor-fundo: #FAECE5;
+    /* Bege/Rosê bem claro */
+    --cor-primaria: #C89F9C;
+    /* Rosê médio */
+    --cor-secundaria: #8A9A86;
+    /* Verde Sálvia */
+    --cor-texto-escuro: #4A4A4A;
+    --cor-texto-claro: #FFFFFF;
+    --fonte-titulos: 'Playfair Display', serif;
+    --fonte-textos: 'Poppins', sans-serif;
+}
+
+/* Reset de estilos globais - Remove margens e paddings padrão de todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos do corpo da página */
+body {
+    font-family: var(--fonte-textos);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-escuro);
+}
+
+/* Estilos do cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: var(--cor-texto-claro);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Estilos da logo */
+.logo h1 {
+    font-family: var(--fonte-titulos);
+    color: var(--cor-primaria);
+    font-size: 2rem;
+}
+
+.logo span {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--cor-secundaria);
+}
+
+/* Estilos da navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cor-texto-escuro);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--cor-primaria);
+}
+
+/* Estilos da seção hero */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(250, 236, 229, 0.8), rgba(250, 236, 229, 0.8)), url('https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&q=80&w=1920') center/cover;
+    padding: 0 20px;
+}
+
+.hero h2 {
+    font-family: var(--fonte-titulos);
+    font-size: 3.5rem;
+    color: var(--cor-texto-escuro);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilos do botão */
+.btn {
+    padding: 12px 30px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--cor-secundaria);
+}
+
+/* Produtos */
+.products {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.products h3 {
+    font-family: var(--fonte-titulos);
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--cor-secundaria);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--cor-texto-claro);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Aqui você pode adicionar fotos reais dos produtos dela depois usando background-image ou tags <img> */
+.card-img {
+    height: 200px;
+    background-color: #eee;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h4 {
+    font-family: var(--fonte-titulos);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.btn-outline {
+    display: inline-block;
+    /* Faz o link respeitar o padding e margens */
+    text-decoration: none;
+    /* Remove o sublinhado padrão dos links */
+    padding: 8px 20px;
+    border: 2px solid var(--cor-primaria);
+    background: transparent;
+    color: var(--cor-primaria);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.btn-outline:hover {
+    background: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+}
+
+/* Sobre */
+.about {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-claro);
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.about h3 {
+    font-family: var(--fonte-titulos);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.btn-social {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--cor-texto-claro);
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn-social:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--cor-texto-escuro);
+    color: var(--cor-texto-claro);
+    font-size: 0.9rem;
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+}
