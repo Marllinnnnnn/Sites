@@ -1,4 +1,4 @@
-/* Variáveis de Cores */
+/* Variáveis de Cores - Altere aqui com as cores do Instagram dela! */
 :root {
     --cor-fundo: #FAECE5;
     /* Bege/Rosê bem claro */
@@ -25,7 +25,16 @@ body {
     background-color: var(--cor-fundo);
     color: var(--cor-texto-escuro);
 }
+/* Faz a rolagem dos links do menu deslizar suavemente */
+html {
+    scroll-behavior: smooth;
+}
 
+/* Dá um "desconto" no topo de todas as seções para o menu não cobrir o título */
+section {
+    scroll-margin-top: 90px;
+    /* Ajuste esse valor se o seu menu for mais alto ou mais baixo */
+}
 /* Estilos do cabeçalho */
 header {
     display: flex;
@@ -97,7 +106,7 @@ nav a:hover {
     margin-right: auto;
 }
 
-/* Estilos do botão */
+/* Estilos do botão principal */
 .btn {
     padding: 12px 30px;
     background-color: var(--cor-primaria);
@@ -111,8 +120,6 @@ nav a:hover {
 .btn:hover {
     background-color: var(--cor-secundaria);
 }
-
-
 
 /* Produtos */
 .products {
@@ -139,43 +146,42 @@ nav a:hover {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s;
-    /* Adicionado para garantir que tudo dentro do card fique alinhado corretamente */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-        text-align: center;
-        
+    justify-content: flex-start;/* Mudamos de center para flex-start para o texto ficar lá em cima */
+    text-align: center;
+    height: 100%;/* Faz todos os cards da mesma fileira terem a mesma altura */
+    animation: surgirSuave 0.6s ease-out;
 }
 
 .card:hover {
     transform: translateY(-5px);
 }
 
-/* Nova regra para estilizar as imagens reais dos produtos */
+/* Regra para estilizar as imagens reais dos produtos */
 .product-image {
-    width: 100%;
-    /* Ocupa toda a largura disponível do card */
-    max-height: 250px;
-    /* Define uma altura máxima para consistência (ajuste conforme necessário) */
-    object-fit: contain;
-    /* Faz a imagem cobrir a área mantendo a proporção (pode cortar as bordas) - ideal para manter tamanhos iguais */
-    /* object-fit: contain;  /* Alternativa: mostra a imagem inteira, com barras se a proporção for diferente. Teste qual prefere! */
+    max-width: 100%;
+    /* Ajustado para max-width */
+    height: 250px;
+    /* Fixado para manter padrão */
+    object-fit: cover;/* Preenche todo o espaço. Se a foto for muito fina ou larga, ele dá um zoom e esconde as sobras */
     border-radius: 8px;
-    /* Cantos arredondados, igual tínhamos na div */
     margin-bottom: 15px;
 }
-
-/* Removido/Simplificado: regras da antiga .card-img */
-/* .card-img { ... } -- Não é mais necessária */
-/* .placeholder-1, .placeholder-2, .placeholder-3 { ... } -- Também não são mais necessárias */
 
 .card h4 {
     font-family: var(--fonte-titulos);
     font-size: 1.4rem;
     margin-bottom: 10px;
     text-align: center;
-    /* Centraliza o título */
+    /* Regras novas para padronizar o tamanho dos títulos */
+        min-height: 65px;
+        /* Reserva espaço suficiente para até 2 ou 3 linhas */
+        display: flex;
+        align-items: center;
+        /* Se tiver só 1 linha, o título fica centralizado no espaço */
+        justify-content: center;
 }
 
 .card p {
@@ -183,7 +189,6 @@ nav a:hover {
     margin-bottom: 20px;
     color: #666;
     text-align: center;
-    /* Centraliza a descrição */
 }
 
 .btn-outline {
@@ -197,13 +202,13 @@ nav a:hover {
     cursor: pointer;
     transition: 0.3s;
     font-weight: 500;
+    margin-top: auto; /* Empurra o botão para a parte mais baixa possível do card */
 }
 
 .btn-outline:hover {
     background: var(--cor-primaria);
     color: var(--cor-texto-claro);
 }
-
 
 /* Sobre */
 .about {
@@ -261,4 +266,43 @@ footer {
     .hero h2 {
         font-size: 2.5rem;
     }
+}
+
+/* --- Funcionalidade Ver Mais / Ver Menos --- */
+
+/* Esconde por padrão */
+.produto-oculto {
+    display: none !important;
+}
+
+/* Classe que "ativa" a visualização com animação */
+.card.ativo {
+    display: flex !important;
+    animation: surgirSuave 0.6s ease-out forwards;
+}
+
+@keyframes surgirSuave {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#btn-ver-mais {
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+.card.ativo:hover {
+    transform: translateY(-5px) !important;
 }
