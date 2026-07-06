@@ -1,0 +1,378 @@
+/* =========================================
+   1. FONTES E VARIÁVEIS
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    /* Paleta de Cores */
+    --bg-main: #fafaf9;
+    --bg-surface: #ffffff;
+    --bg-card: #fafaf9;
+    --bg-muted: #f5f5f4;
+    --bg-dark: #1c1917;
+
+    --text-main: #292524;
+    --text-dark: #1c1917;
+    --text-muted: #78716c;
+    --text-light: #d6d3d1;
+
+    --primary: #b45309;
+    --primary-hover: #92400e;
+    --instagram: #db2777;
+
+    /* Tamanhos Base */
+    --container-width: 1200px;
+    --nav-height: 80px;
+}
+
+/* =========================================
+2. RESET GERAL E TIPOGRAFIA
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+.brand-font {
+    font-family: 'Playfair Display', serif;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.highlight {
+    color: var(--primary);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Container Principal */
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =========================================
+3. BARRA DE NAVEGAÇÃO (NAVBAR)
+   ========================================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--nav-height);
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+/* Container da logo para alinhar imagem e texto lado a lado */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* Espaçamento entre a imagem e o nome */
+}
+
+/* Restringe o tamanho da imagem da logo */
+.logo-img {
+    height: 50px;
+    /* Altura ideal para caber na navbar de 80px */
+    width: auto;
+    /* Mantém a proporção original da imagem */
+    object-fit: contain;
+}
+
+.logo span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.nav-social a {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    transition: color 0.3s;
+}
+
+.nav-social a:hover {
+    color: var(--instagram);
+}
+
+/* =========================================
+4. HERO SECTION (INÍCIO)
+   ========================================= */
+.hero {
+    padding-top: calc(var(--nav-height) + 60px);
+    padding-bottom: 80px;
+    background-color: var(--bg-muted);
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    color: var(--text-dark);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.125rem;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    max-width: 90%;
+}
+
+.hero-image-wrapper {
+    flex: 1;
+}
+
+.hero-image {
+    width: 445px;
+    height: 655px;
+    object-fit:cover;
+    border-radius: 16px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Botões */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary);
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-weight: 500;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+/* =========================================
+5. SEÇÃO DE CATÁLOGO
+   ========================================= */
+.catalog {
+    padding: 80px 0;
+    background-color: var(--bg-surface);
+}
+
+.section-header {
+    
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+/* Cards do Catálogo */
+.card {
+    background-color: var(--bg-card);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.card-image-wrapper {
+    height: 320px;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.card:hover .card-img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 24px;
+}
+
+.card-content h3 {
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    min-height: 60px;
+}
+
+/* Botão Secundário */
+.btn-outline {
+    display: block;
+    text-align: center;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 10px 0;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn-outline:hover {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+/* =========================================
+6. FOOTER
+   ========================================= */
+.footer {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 60px 0;
+}
+
+.footer h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 24px;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.footer-social a {
+    font-size: 2rem;
+    color: var(--text-muted);
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #fff;
+}
+
+.footer p {
+    font-size: 0.875rem;
+}
+
+/* =========================================
+7. RESPONSIVIDADE (MOBILE)
+   ========================================= */
+@media (max-width: 900px) {
+    .catalog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        /* Esconde os links no mobile por simplicidade */
+    }
+
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        max-width: 100%;
+    }
+
+    .hero-image {
+        height: 350px;
+    }
+
+    .catalog-grid {
+        grid-template-columns: 1fr;
+    }
+}
